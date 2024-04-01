@@ -11,7 +11,23 @@
 
 ### Model loss over training
 ![modloss](https://github.com/JeevanDhinsa/Star-Wars-Image-Classifier/blob/main/Outputs/modloss.png))
-  
+
+## Example
+
+![r2d2](https://github.com/JeevanDhinsa/Star-Wars-Image-Classifier/blob/main/Outputs/r2d2test.png)
+
+```
+image=cv2.imread("r2d2test.png")
+image_resized= cv2.resize(image, (img_height,img_width))
+image=np.expand_dims(image_resized,axis=0)
+print(image.shape)
+
+pred=resnet_model.predict(image)
+output_class=class_names[np.argmax(pred)]
+print("The predicted class is", output_class)
+```
+The predicted class is R2D2
+
 ## Data Preparation
 
 For instructions on splitting data into Training, Testing and Validation catergories see [Data Preprocessing](https://github.com/JeevanDhinsa/Star-Wars-Image-Classifier/blob/main/star_wars_classifier.ipynb)
