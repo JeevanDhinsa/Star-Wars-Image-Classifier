@@ -2,7 +2,7 @@
 
  Image classifier for Star Wars characters in python using the residual neural network ResNet-50.
 
- The classifier currently has an accuracy of 77% 
+ The classifier currently has an accuracy of 77% in predicting characters based on testing data.
 
 ## Performance
 
